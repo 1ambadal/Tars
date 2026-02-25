@@ -38,7 +38,7 @@ else
 fi
 
 if [ -z "$USER_QUERY" ]; then
-    echo "Usage: tars [question]"
+    echo "Usage: @ [question]"
     exit 1
 fi
 

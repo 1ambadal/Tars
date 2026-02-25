@@ -25,7 +25,7 @@ chmod +x tars.sh
 ```
 3. Move the file somewhere in your `$PATH`, like `/usr/local/bin`:
 ```bash
-sudo mv tars.sh /usr/local/bin/tars
+sudo mv tars.sh /usr/local/bin/@
 ```
 4. Set up your Gemini API Key as an environment variable (add this to your `.bashrc` or `.zshrc`):
 ```bash
@@ -35,22 +35,22 @@ export GEMINI_API_KEY="your_api_key_here"
 ## Usage
 Simply ask a question right in the terminal:
 ```bash
-tars list all files larger than 1gb in the current directory
+@ list all files larger than 1gb in the current directory
 ```
 
 ### Piping Input
 You can pipe text through standard input directly into your query:
 ```bash
-cat Dockerfile | tars what does this file do?
+cat Dockerfile | @ what does this file do?
 ```
 ```bash
-ls -la | grep "error" | tars summarize these log files
+ls -la | grep "error" | @ summarize these log files
 ```
 
 ### Passing Flags
 By default, the script points to `gemini-2.5-flash-lite`. For detailed or complex logic, pass the `--pro` flag to invoke `gemini-2.5-flash`.
 ```bash
-tars --pro write a complex python script that scrapes a website
+@ --pro write a complex python script that scrapes a website
 ```
 
 ## License
